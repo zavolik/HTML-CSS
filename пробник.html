@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Практика HTML</title>
+	<script src="https://unpkg.com/imask"></script>
+	<link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+
+<body>
+	<form>
+	<fieldset>
+		<legend><b>Контактная информация</b></legend> 
+		<div>
+			<label for="text1">Имя*</label>
+			<input type="text" id="text1" style="font-style: italic;" placeholder="Введите имя" maxlength="10" size="30"required>
+		</div>
+		<div>
+			<label for="phone">Телефон</label>
+			<input type="tel" id="phone" style="font-style: italic;" placeholder="Введите номер телефона"size="30">
+			<script>
+        		var phoneInput = document.getElementById('phone');
+        		var phoneMask = new IMask(phoneInput, {
+            		mask: '+{7} (000) 000-00-00'
+        		});
+    		</script>
+		</div>
+		<div>
+			<label for="text3">E-mail*</label>
+			<input type="e-mail" id="e-mail" style="font-style: italic" placeholder="Введите адрес электронной почты" maxlength="10" size="40" required>
+			<input type="submit" id="sub1" value="Отправить"> 
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Персональная информация</legend> 
+		<div>
+			<label for="num1">Возраст* </label>
+			<input type="number" id="num1" placeholder="1-99"><br><br>
+			<label for="num1">Кем вы себя идентифицируете?</label>
+			<select> 
+			<option value="1">Женщиной</option> 
+			<option value="2">Мужчиной</option>
+			<option value="3">Инопланетянином</option>
+			<option value="4">Лягушкой</option>
+			<option value="5">Еще не определился</option>
+		</select><br><br>
+			<label for="comm1">Перечислите личные качества через запятую</label>
+			<textarea style="max-width: 153px; max-height: 50px;min-width: 100px;min-height: 20px"></textarea>
+		</div>
+	</fieldset>
+	<fieldset>
+			<legend>Вы любите <b>собак</b>?</legend>
+			<label>Люблю<input type="radio" name="1" id="radio1"></label>
+			<label>Очень люблю<input type="radio" name="1" id="radio2" checked></label>
+		</fieldset>
+	<fieldset>
+		<legend>Выберите любимую породу собаки</legend> 
+		<label><input type="checkbox" id="check1">Такса</label>
+		<label><input type="checkbox" id="check2">Хаски</label>
+		<label><input type="checkbox" id="check1">Корги</label>
+		<label><input type="checkbox" id="check2">Колли</label>
+		<label><input type="checkbox" id="check1">Басенджи</label>
+		<label><input type="checkbox" id="check2">Шпиц</label>
+		<label><input type="checkbox" id="check1">Русская борзая</label>
+		<label><input type="checkbox" id="check2">Другое</label>
+	</fieldset>
+	<fieldset>
+		<legend>Загрузите вашу фотографию / фотографию вашего питомца</legend>
+		<div>
+			<label for="file1">Загрузка файла(-ов)</label>
+			<input type="file" id="file1" multiple accept=".jpg,.jpeg,.heic,image/jpeg,image/heic">
+		</div>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,10 @@
+input,
+textarea,
+select {
+  background-color: #FFFACD;
+}
+
+input[type="submit"] {
+  background-color: #90ee90;
+  color: black;
+}
